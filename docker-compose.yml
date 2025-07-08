@@ -5,7 +5,7 @@ services:
     image: postgres:14
     container_name: leaveee-postgres
     ports:
-      - "5481:5432"
+      - "5600:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin321
@@ -18,7 +18,7 @@ services:
     build: ./Backend
     container_name: leaveee-backend
     ports:
-      - "3000:3000"
+      - "3600:3600"
     depends_on:
       - postgres
     volumes:
@@ -35,7 +35,7 @@ services:
     build: ./employee-leave
     container_name: employee-leaveee
     ports:
-      - "8241:80"
+      - "8600:80"
     depends_on:
       - backend
 
@@ -43,7 +43,7 @@ services:
     build: ./hr-leave
     container_name: hr-leaveee
     ports:
-      - "8242:80"
+      - "8601:80"
     depends_on:
       - backend
 

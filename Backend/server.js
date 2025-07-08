@@ -5,7 +5,7 @@ const multer = require('multer');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3600;
 
 // Middleware
 app.use(cors());
@@ -17,7 +17,7 @@ const pool = new Pool({
     host: 'postgres',
     database: 'leave_management',
     password: 'admin321',
-    port: 5432,
+    port: 5600,
 });
 
 // Configure Multer for file uploads
